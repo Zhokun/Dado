@@ -9,7 +9,7 @@ class Dice(Tk):
         Tk.__init__(self)
         # Define features of Game Window
         self.geometry('400x400+2000+500')  # Geometry and position on screen
-        self.title('Dice game')  # Window title
+        self.title('Dice guessing game')  # Window title
         self.iconphoto(True, PhotoImage(file='Da.png'))  # Icon / My signature
         self.config(background='white')
         # self.img = ImageTk.PhotoImage(Image.open('D1.png'))
@@ -35,29 +35,29 @@ class Dice(Tk):
         self.message_label = Label(self.message_frame, text=message, font=fonttext, background='white')
         self.message_label.pack()
         # Numbers to choose Frame
-        self.n_choose_frame1 = Frame(self)
+        self.n_choose_frame1 = Frame(self, background='white')
         self.n_choose_frame1.pack()
-        self.n_choose_frame2 = Frame(self)
+        self.n_choose_frame2 = Frame(self, background='white')
         self.n_choose_frame2.pack()
         # Numbered buttons
         self.n1 = Button(self.n_choose_frame1, text='1', width=3, font=fontnumbersize,
                          command=self.opn1, background='white')
-        self.n1.pack(side=LEFT, anchor=N)
+        self.n1.pack(side=LEFT, anchor=N, padx=3)
         self.n2 = Button(self.n_choose_frame1, text='2', width=3, font=fontnumbersize,
                          command=self.opn2, background='white')
-        self.n2.pack(side=LEFT, anchor=N)
+        self.n2.pack(side=LEFT, anchor=N, padx=3)
         self.n3 = Button(self.n_choose_frame1, text='3', width=3, font=fontnumbersize,
                          command=self.opn3, background='white')
-        self.n3.pack(side=LEFT, anchor=N)
+        self.n3.pack(side=LEFT, anchor=N, padx=3)
         self.n4 = Button(self.n_choose_frame2, text='4', width=3, font=fontnumbersize,
                          command=self.opn4, background='white')
-        self.n4.pack(side=LEFT, anchor=S)
+        self.n4.pack(side=LEFT, anchor=S, padx=3 )
         self.n5 = Button(self.n_choose_frame2, text='5', width=3, font=fontnumbersize,
                          command=self.opn5, background='white')
-        self.n5.pack(side=LEFT, anchor=S)
+        self.n5.pack(side=LEFT, anchor=S, padx=3)
         self.n6 = Button(self.n_choose_frame2, text='6', width=3, font=fontnumbersize,
                          command=self.opn6, background='white')
-        self.n6.pack(side=LEFT, anchor=S)
+        self.n6.pack(side=LEFT, anchor=S, padx=3)
 
         # Victorious?
         self.r_frame = Frame(self)
@@ -84,7 +84,6 @@ class Dice(Tk):
                 self.result.config(text='Better luck next time!', font=('Verdana', 20), fg='red')
 
         self.tempo += 0.05
-        print(self.tempo)
         # A simple timer to change image e make it more dynamic
         if start:
             if self.tempo < 0.3:
@@ -111,7 +110,6 @@ class Dice(Tk):
                 self.result.config(text='Better luck next time!', font=('Verdana', 20), fg='red')
 
         self.tempo += 0.05
-        print(self.tempo)
         # A simple timer to change image e make it more dynamic
         if start:
             if self.tempo < 0.3:
@@ -138,7 +136,7 @@ class Dice(Tk):
                 self.result.config(text='Better luck next time!', font=('Verdana', 20), fg='red')
 
         self.tempo += 0.05
-        print(self.tempo)
+
         # A simple timer to change image e make it more dynamic
         if start:
             if self.tempo < 0.3:
@@ -165,7 +163,6 @@ class Dice(Tk):
                 self.result.config(text='Better luck next time!', font=('Verdana', 20), fg='red')
 
         self.tempo += 0.05
-        print(self.tempo)
         # A simple timer to change image e make it more dynamic
         if start:
             if self.tempo < 0.3:
@@ -192,7 +189,6 @@ class Dice(Tk):
                 self.result.config(text='Better luck next time!', font=('Verdana', 20), fg='red')
 
         self.tempo += 0.05
-        print(self.tempo)
         # A simple timer to change image e make it more dynamic
         if start:
             if self.tempo < 0.3:
@@ -219,7 +215,6 @@ class Dice(Tk):
                 self.result.config(text='Better luck next time!', font=('Verdana', 20), fg='red')
 
         self.tempo += 0.05
-        print(self.tempo)
         # A simple timer to change image e make it more dynamic
         if start:
             if self.tempo < 0.3:
