@@ -7,6 +7,13 @@ from PIL import ImageTk, Image
 class Dice(Tk):
     def __init__(self):
         Tk.__init__(self)
+
+        self.my_menu = Menu(self)
+        self.config(menu=self.my_menu)
+        self.file_menu = Menu(self.my_menu, tearoff=False)
+        self.file_menu.add_command(label='Sair', command=self.quit)
+        self.my_menu.add_cascade(label='Arquivo', menu=self.file_menu)
+
         # Define features of Game Window
         self.geometry(f'400x400+'
                       f'{int((self.winfo_screenwidth()/2) - (400/2))}+{int((self.winfo_screenheight()/2) - (400/2))}')  # Geometry and position on screen
