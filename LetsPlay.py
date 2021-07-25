@@ -8,11 +8,11 @@ class Dice(Tk):
     def __init__(self):
         Tk.__init__(self)
 
-        self.my_menu = Menu(self)
-        self.config(menu=self.my_menu)
-        self.file_menu = Menu(self.my_menu, tearoff=False)
-        self.file_menu.add_command(label='Sair', command=self.quit)
-        self.my_menu.add_cascade(label='Arquivo', menu=self.file_menu)
+        self.menu = Menu(self)
+        self.config(menu=self.menu)
+        self.menu_arquivo = Menu(self.menu, tearoff=False)
+        self.menu_arquivo.add_command(label='Sair', command=self.quit)
+        self.menu.add_cascade(label='Arquivo', menu=self.menu_arquivo)
 
         # Define features of Game Window
         self.geometry(f'400x400+'
