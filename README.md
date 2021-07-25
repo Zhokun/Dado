@@ -1,2 +1,2 @@
-# Dado
-Um gerador de número aletatório (dado) com GUI - Tkinter
+# Dado - Adivinhação
+Um jogo simples onde você escolhe um número e o computador gera um dado aleatório para ver se você acerta onde ele vai parar.
