@@ -8,7 +8,8 @@ class Dice(Tk):
     def __init__(self):
         Tk.__init__(self)
         # Define features of Game Window
-        self.geometry('400x400+2000+500')  # Geometry and position on screen
+        self.geometry(f'400x400+'
+                      f'{int((self.winfo_screenwidth()/2) - (400/2))}+{int((self.winfo_screenheight()/2) - (400/2))}')  # Geometry and position on screen
         self.title('Dice guessing game')  # Window title
         self.iconphoto(True, PhotoImage(file='Da.png'))  # Icon / My signature
         self.config(background='white')
